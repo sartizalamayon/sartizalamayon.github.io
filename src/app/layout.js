@@ -1,15 +1,30 @@
+import { MyProvider } from "@/context/MyProvider";
 import "./globals.css";
-
-
+import Navbar from "@/components/header/Navbar";
+import BottomNav from "@/components/header/BottomNav";
+import { ModalProvider } from "@/context/ModalProvider";
+import TerminalModal from "@/components/TerminalModal";
 export const metadata = {
-  title: "Home",
-  description: "Protfoilo of a sSartiz Alam Ayon",
+  title: "Home | Sartiz Alam Ayon",
+  description: "Protfoilo of a Sartiz Alam Ayon, a full stack developer, web devloper, front end devloper, software engineer from Bangladesh",
 };
+
 export default function RootLayout({ children }) {
   return (
     <html lang="en">
       <body className="bg-primary min-h-screen">
-        {children}
+  
+        <MyProvider>
+        <ModalProvider>
+        <Navbar />
+        <BottomNav />
+        <div className="container mx-auto">
+          {children}
+          <TerminalModal />
+        </div>
+        </ModalProvider>
+        </MyProvider>
+      
       </body>
     </html>
   );

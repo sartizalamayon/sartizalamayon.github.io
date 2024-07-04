@@ -10,8 +10,8 @@ module.exports = {
       colors: {
         primary:"rgb(0, 0, 0)",
         secondary:"rgb(255, 255, 255)",
-        accent:"rgb(60, 207, 145)",
-        neutral:"rgb(143, 144, 148)",
+        accent:"#3CCF91",
+        neutral:"#8f9ba8",
         card:"rgb(8, 8, 8)",
       },
     },
