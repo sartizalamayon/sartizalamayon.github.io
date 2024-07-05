@@ -66,7 +66,7 @@ const Navigation = () => {
               BLOG
             </li>
           </Link>
-          <Link
+          {/* <Link
             href="/services"
             className={`nav-${pathname === "/services" ? "active" : ""}`}
           >
@@ -77,7 +77,7 @@ const Navigation = () => {
             >
               SERVICES
             </li>
-          </Link>
+          </Link> */}
         </ul>
     );
 };
