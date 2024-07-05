@@ -19,7 +19,7 @@ export default function RootLayout({ children }) {
         <ModalProvider>
         <Navbar />
         <BottomNav />
-        <div className="container mx-auto">
+        <div className="container mx-auto max-w-7xl">
           {children}
           <TerminalModal />
         </div>

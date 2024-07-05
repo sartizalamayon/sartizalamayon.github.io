@@ -12,7 +12,7 @@ export default function Home() {
     <div className="relative h-[calc(100vh-64px)]">
     <main className="flex flex-col justify-center items-left h-[calc(100vh-64px)] gap-3">
       <div className="bg-[url('/public/bg.svg')]">
-        <h1 className="text-2xl text-accent">Hey there, I'm</h1>
+        <h1 className="text-2xl text-accent">{`Hey there, I'm`}</h1>
         <h2 className="text-7xl font-semibold text-secondary">Sartiz Alam Ayon.</h2>
       </div>
 
