@@ -18,7 +18,7 @@ const Navbar = () => {
           </div>
         </Link>
         <div className="hidden md:flex"><Navigation /></div>
-        <button onClick={openModal} className="text-3xl text-accent"><BiSolidTerminal />        </button>
+        <button onClick={openModal} className="text-3xl text-accent"><BiSolidTerminal /></button>
       </nav>
     </div>
   );
