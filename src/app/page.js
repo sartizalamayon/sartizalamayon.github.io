@@ -10,7 +10,7 @@ export default function Home() {
   const { openModal } = useModal();
 
   return (
-    <div className="relative lg:h-[calc(100vh-64px)] flex flex-col flex-col-reverse lg:flex-row justify-between items-center">
+    <div className="relative lg:h-[calc(100vh-64px)] flex flex-col-reverse lg:flex-row justify-between items-center">
     <main className="flex flex-col justify-center items-left h-[calc(100vh-64px)] gap-3">
       <div className="bg-[url('/public/bg.svg')]">
         <h1 className="text-2xl text-accent">{`Hey there, I'm`}</h1>
