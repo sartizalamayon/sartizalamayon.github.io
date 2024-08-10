@@ -4,12 +4,13 @@ import { useModal } from "@/context/ModalProvider";
 import { BiSolidTerminal } from "react-icons/bi";
 import GooeyButton from "@/components/GooeyButton";
 import SocialSidebar from "@/components/SocialSidebar";
+import MyAvatar from "@/components/MyAvater";
 
 export default function Home() {
   const { openModal } = useModal();
 
   return (
-    <div className="relative h-[calc(100vh-64px)]">
+    <div className="relative lg:h-[calc(100vh-64px)] flex flex-col flex-col-reverse lg:flex-row justify-between items-center">
     <main className="flex flex-col justify-center items-left h-[calc(100vh-64px)] gap-3">
       <div className="bg-[url('/public/bg.svg')]">
         <h1 className="text-2xl text-accent">{`Hey there, I'm`}</h1>
@@ -44,7 +45,9 @@ export default function Home() {
         </a>
       </div>
     </main>
-    <SocialSidebar />
+
+    <MyAvatar/>
+    {/* <SocialSidebar /> */}
     </div>
   );
 }

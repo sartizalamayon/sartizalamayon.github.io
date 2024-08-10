@@ -3,6 +3,10 @@ import React from 'react';
 import Image from 'next/image';
 import { motion } from 'framer-motion';
 
+// Who you are and what you’re doing
+// How you got there
+// Where you’re looking to go next
+
 const Page = () => {
     return (
         <div className="text-secondary text-left min-h-[calc(100vh-64px)] mt-11">
@@ -45,6 +49,7 @@ const Page = () => {
                 >
                     <h2 className="text-3xl font-semibold mb-4">Overview</h2>
                     <p className="mb-4">
+                        
                         Eager and enthusiastic, I am a dedicated individual pursuing Computer Science at Brac University. I have a passion for crafting immersive user experiences and a keen eye for detail. Through hands-on experience and mentorship, I want to expand my skill set and make tangible contributions to projects that push the boundaries while leveraging industry best practices. With a proactive approach and a growth mindset, I am ready to embrace challenges and make meaningful contributions.
                     </p>
                     <h2 className="text-3xl font-semibold mb-4">Interests</h2>

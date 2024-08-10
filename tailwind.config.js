@@ -14,6 +14,9 @@ module.exports = {
         neutral:"#8f9ba8",
         card:"rgb(8, 8, 8)",
       },
+      animation: {
+        'pulse-slow': 'pulse 3s infinite',
+      },
     },
   },
   plugins: [
