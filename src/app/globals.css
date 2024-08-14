@@ -158,8 +158,8 @@ html {
   height: 100%;
   /* Add your background pattern here */
   background-color: #000000;
-  background-image: radial-gradient(#0e0e0e 20%, transparent 10%),
-                      radial-gradient(#693232 10%, transparent 10%);
+  background-image: 
+                      radial-gradient(#0e0e0e 11%, transparent 10%);
   background-size: 100px 100px;
   background-position: 0 0, 50px 50px;
 }
