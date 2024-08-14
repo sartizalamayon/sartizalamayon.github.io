@@ -171,7 +171,7 @@ html {
   background: #000000;
   --gap: 5em;
   --line: 0.7px;
-  --color: rgba(255, 255, 255, 0.2);
+  --color: rgba(255, 255, 255, 0.12);
 
   background-image: linear-gradient(
       -90deg,
