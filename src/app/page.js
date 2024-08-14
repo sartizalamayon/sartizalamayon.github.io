@@ -47,7 +47,7 @@ export default function Home() {
     </main>
 
     <MyAvatar/>
-    {/* <SocialSidebar /> */}
+  
     </div>
   );
 }

@@ -13,15 +13,17 @@ export default function RootLayout({ children }) {
   return (
     <html lang="en">
       <link rel="icon" href="favicon.png" sizes="any" />
-      <body className="bg-primary min-h-screen">
-  
+      <body className="bg-primary min-h-screen chess-bg">
+        {/* implement background */}
         <MyProvider>
         <ModalProvider>
         <Navbar />
         <BottomNav />
-        <div className="container mx-auto max-w-7xl">
-          {children}
+        <div className="w-full">
+          <div className="container mx-auto max-w-7xl">
+          {children} 
           <TerminalModal />
+          </div>
         </div>
         </ModalProvider>
         </MyProvider>

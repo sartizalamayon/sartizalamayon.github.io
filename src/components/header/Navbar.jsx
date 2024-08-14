@@ -8,7 +8,7 @@ import { useModal } from "@/context/ModalProvider";
 const Navbar = () => {
   const {openModal} = useModal();
   return (
-    <div className="relative h-[64px] flex justify-center items-center border-b-gray-700 border-b-[0.5px]">
+    <div className="relative h-[64px] flex justify-center items-center ">
       <nav className="w-full flex justify-between items-center px-3">
         <Link href="/">
           <div>

@@ -79,7 +79,7 @@ const GooeyButton = ({ text, onClick }) => {
       </svg>
 
       <span className="button--bubble__container">
-        <button ref={buttonRef} onClick={onClick} className="button button--bubble">
+        <button ref={buttonRef} onClick={onClick} className="button button--bubble ">
           {text}
         </button>
         <span className="button--bubble__effect-container">
