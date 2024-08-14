@@ -152,26 +152,14 @@ html {
 }
 
 /* home background */
-
-.dot-bg {
-  width: 100%;
-  height: 100%;
-  /* Add your background pattern here */
-  background-color: #000000;
-  background-image: 
-                      radial-gradient(#0e0e0e 11%, transparent 10%);
-  background-size: 100px 100px;
-  background-position: 0 0, 50px 50px;
-}
-
 .chess-bg{
   width: 100%;
   height: 100%;
 
   background: #000000;
-  --gap: 5em;
+  --gap: 9em;
   --line: 0.7px;
-  --color: rgba(255, 255, 255, 0.12);
+  --color: rgba(255, 255, 255, 0.20);
 
   background-image: linear-gradient(
       -90deg,
