@@ -19,7 +19,7 @@ const Avatar = () => {
 
 const MyAvatar = () => {
     return (
-        <div className="relative flex items-center justify-center w-[360px] h-[360px] lg:w-[360px] lg:h-[550px] overflow-visible">
+        <div className="relative flex items-center justify-center w-[300px] h-[300px] lg:w-[360px] lg:h-[550px] overflow-visible ">
             <div className="absolute top-auto w-[170px] h-[170px] lg:w-[300px] lg:h-[300px] rounded-full border-4 border-accent shadow-[0_0_15px_rgba(60,207,145,0.6)] animate-pulse"></div>
             <div className="absolute top-auto w-[150px] h-[150px] lg:w-[280px] lg:h-[280px] rounded-full border-4 border-accent shadow-[0_0_15px_rgba(60,207,145,0.6)] animate-pulse"></div>
             <Canvas className="w-[320px] h-[320px] lg:w-[360px] lg:h-[360px] overflow-visible">

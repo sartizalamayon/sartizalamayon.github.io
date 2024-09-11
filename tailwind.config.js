@@ -26,6 +26,9 @@ module.exports = {
         'pulse-slow': 'pulse 3s infinite',
         
       },
+      screens: {
+        'heading-padding': {'min': '1024px', 'max': '1356px'}, 
+      },
       
     },
   },

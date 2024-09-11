@@ -1,7 +1,6 @@
 import { MyProvider } from "@/context/MyProvider";
 import "./globals.css";
 import Navbar from "@/components/header/Navbar";
-import BottomNav from "@/components/header/BottomNav";
 import { ModalProvider } from "@/context/ModalProvider";
 import TerminalModal from "@/components/TerminalModal";
 import { BackgroundBeamsWithCollision } from "@/components/ui/BackgroundBeamsWithCollisio";
@@ -20,7 +19,7 @@ export default function RootLayout({ children }) {
         <MyProvider>
         <ModalProvider>
         <Navbar />
-        <BottomNav />
+        
         <BackgroundBeamsWithCollision>
         <div className="w-full">
           <div className="container mx-auto max-w-7xl">
