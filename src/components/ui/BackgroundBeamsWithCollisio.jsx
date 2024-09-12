@@ -11,6 +11,7 @@ export const BackgroundBeamsWithCollision = ({
   const containerRef = useRef(null);
   const parentRef = useRef(null);
   const pathname = usePathname();
+  const [mid, setMid] = useState();
 
   const isHomePage = pathname === "/";
 
@@ -35,7 +36,13 @@ export const BackgroundBeamsWithCollision = ({
   // console.log(windowWidth / 2 + 140)
 
   const gap = 250;
-  const mid = window?.innerWidth / 2 ;
+  
+  useEffect(() => {
+    if (typeof window !== "undefined") {
+      setMid(window?.innerWidth / 2);
+    }
+  }, []);
+  
 
 
 
@@ -130,9 +137,9 @@ export const BackgroundBeamsWithCollision = ({
         // h-screen if you want bigger
         className
       )}>
-      {beams.map((beam) => (
+      {beams.map((beam, idx) => (
         <CollisionMechanism
-          key={beam.initialX + "beam-idx"}
+          key={idx}
           beamOptions={beam}
           containerRef={containerRef}
           parentRef={parentRef} />
