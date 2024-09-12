@@ -13,46 +13,113 @@ export const BackgroundBeamsWithCollision = ({
   const pathname = usePathname();
 
   const isHomePage = pathname === "/";
-  console.log(pathname);
+
+  // Beams configuration
+  // const [windowWidth, setWindowWidth] = useState(window.innerWidth);
+
+  // useEffect(() => {
+  //   // Function to update state with the current window width
+  //   const handleResize = () => {
+  //     setWindowWidth(window.innerWidth);
+  //   };
+
+  //   // Add event listener to listen for window resize
+  //   window.addEventListener("resize", handleResize);
+
+  //   // Clean up the event listener when the component unmounts
+  //   return () => {
+  //     window.removeEventListener("resize", handleResize);
+  //   };
+  // }, []);
+
+  // console.log(windowWidth / 2 + 140)
+
+  const gap = 250;
+  const mid = window.innerWidth / 2 ;
+
+
 
   const beams = [
     {
-      initialX: 576, // Aligned with the grid (4 gaps)
-      translateX: 576, 
-      duration: 3,
-      repeatDelay: 3,
-      delay: 4,
+      // Align with the 1st vertical line to the right
+      initialX: mid + (gap / 2) + (gap * 0),
+      translateX: mid + (gap / 2) + (gap * 0),
+      duration: 8,       // Increased duration for slower animation
+      repeatDelay: 14,   // Longer repeat delay
+      delay: 1,          // Starts almost immediately
     },
     {
-      initialX: 144, // Aligned with the grid (1 gap)
-      translateX: 144,
-      duration: 7,
-      repeatDelay: 7,
-      className: "h-6", // Adjust beam height based on preference
+      // Align with the 2nd vertical line to the right
+      initialX: mid + (gap / 2) + (gap * 1),
+      translateX: mid + (gap / 2) + (gap * 1),
+      duration: 10,      // Increased duration for a much slower transition
+      repeatDelay: 16,   // Longer repeat delay
+      delay: 2,          // Starts with a small delay
+      className: "h-6",
     },
     {
-      initialX: 432, // Aligned with the grid (3 gaps)
-      translateX: 432,
-      duration: 5,
-      repeatDelay: 14,
-      delay: 4,
+      // Align with the 3rd vertical line to the right
+      initialX: mid + (gap / 2) + (gap * 2),
+      translateX: mid + (gap / 2) + (gap * 2),
+      duration: 9,       // Slower for a smoother effect
+      repeatDelay: 18,   // Longer repeat delay
+      delay: 3,          // Starts with a noticeable delay
     },
     {
-      initialX: 864, // Aligned with the grid (6 gaps)
-      translateX: 864,
-      duration: 11,
-      repeatDelay: 2,
-      className: "h-20", // Adjust beam height
+      // Align with the 4th vertical line to the right
+      initialX: mid + (gap / 2) + (gap * 3),
+      translateX: mid + (gap / 2) + (gap * 3),
+      duration: 11,      // Slower animation
+      repeatDelay: 15,   // Balanced repeat delay
+      delay: 1,          // Quick start with a very short delay
     },
     {
-      initialX: 1152, // Aligned with the grid (8 gaps)
-      translateX: 1152,
-      duration: 6,
-      repeatDelay: 4,
-      delay: 2,
+      // Align with the 1st vertical line to the left
+      initialX: mid - (gap / 2) - (gap * 0),
+      translateX: mid - (gap / 2) - (gap * 0),
+      duration: 10,      // Slower movement
+      repeatDelay: 9,    // Moderate repeat
+      delay: 2,          // Medium delay before starting
+      className: "h-20",
+    },
+    {
+      // Align with the 2nd vertical line to the left
+      initialX: mid - (gap / 2) - (gap * 1),
+      translateX: mid - (gap / 2) - (gap * 1),
+      duration: 9,       // Slower duration
+      repeatDelay: 12,   // Longer repeat delay
+      delay: 0,          // Starts immediately
+      className: "h-20",
+    },
+    {
+      // Align with the 3rd vertical line to the left
+      initialX: mid - (gap / 2) - (gap * 2),
+      translateX: mid - (gap / 2) - (gap * 2),
+      duration: 8,       // Slower for a consistent effect
+      repeatDelay: 10,   // Longer repeat delay
+      delay: 1,          // Small delay before starting
+      className: "h-6",
+    },
+    {
+      // Align with the 4th vertical line to the left
+      initialX: mid - (gap / 2) - (gap * 3),
+      translateX: mid - (gap / 2) - (gap * 3),
+      duration: 10,      // Slower and smoother
+      repeatDelay: 16,   // Longer repeat delay
+      delay: 3,          // Starts late for visual variety
+      className: "h-6",
+    },
+    {
+      // Align with the 5th vertical line to the left
+      initialX: mid - (gap / 2) - (gap * 4),
+      translateX: mid - (gap / 2) - (gap * 4),
+      duration: 9,       // Slower duration
+      repeatDelay: 15,   // Longer repeat delay
+      delay: 2,          // Moderate delay to balance out flow
       className: "h-6",
     },
   ];
+  
   
 
   return (

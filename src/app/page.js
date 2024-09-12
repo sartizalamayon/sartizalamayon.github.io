@@ -1,13 +1,9 @@
-// pages/index.js or pages/Home.js
 "use client";
 import { useModal } from "@/context/ModalProvider";
 import { BiSolidTerminal } from "react-icons/bi";
-// import GooeyButton from "@/components/GooeyButton";
-// import SocialSidebar from "@/components/SocialSidebar";
 import MyAvatar from "@/components/MyAvater";
 import { FaFilePdf, FaGithub, FaLinkedin } from "react-icons/fa";
-import { FaVoicemail } from "react-icons/fa6";
-import { IconMail, IconMailAi } from "@tabler/icons-react";
+import HomeButtons from "@/components/HomeButtons";
 
 const links = [
   {
@@ -65,31 +61,18 @@ export default function Home() {
           </div>
         </div>
         <div className="md:hidden">
-          <div className="text-2xl text-white flex gap-2">
+          <div className="text-[15px] text-white flex gap-2">
             Press
             <div className="flex">
-              <button onClick={openModal} className="text-3xl text-accent">
+              <button onClick={openModal} className="text-xl text-accent">
                 <BiSolidTerminal />
               </button>
             </div>
             to get started.
           </div>
         </div>
-        <div className="mt-6 flex gap-3">
-          {/* <a href="CV.pdf" className="my-6" target="_blank">
-          <GooeyButton text="Download CV"/>
-        </a> */}
-          {links.map((link, index) => (
-            <a
-              href={link.url}
-              target="_blank"
-              key={index}
-              className="flex justify-center items-center gap-1 bg-[#222] hover:bg-[#333] rounded-md px-4 py-2 hover:shadow-inner shadow-white"
-            >
-              <div className="text-accent">{link.icon}</div>
-              <p className="text-base font-medium text-white">{link.name}</p>
-            </a>
-          ))}
+        <div className="mt-6">
+          <HomeButtons/>
         </div>
       </main>
 
