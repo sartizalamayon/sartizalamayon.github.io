@@ -22,7 +22,7 @@ const HomeButtons = () => {
         },
     ];
     return (
-        <div className='flex xs:gap-1 gap-3'>
+        <div className='flex xs:gap-2 gap-3'>
             {links.map((link, index) => (
             <a
               href={link.url}
