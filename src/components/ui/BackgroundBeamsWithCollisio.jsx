@@ -35,7 +35,7 @@ export const BackgroundBeamsWithCollision = ({
   // console.log(windowWidth / 2 + 140)
 
   const gap = 250;
-  const mid = window.innerWidth / 2 ;
+  const mid = window?.innerWidth / 2 ;
 
 
 
