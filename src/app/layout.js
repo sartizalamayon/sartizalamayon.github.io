@@ -14,7 +14,7 @@ export default function RootLayout({ children }) {
     <html lang="en">
       <link rel="icon" href="favicon.png" sizes="any" />
       
-      <body className="bg-primary min-h-screen chess-bg">
+      <body className="bg-primary min-h-screen chess-bg max-h-screen">
         {/* implement background */}
         <MyProvider>
         <ModalProvider>
