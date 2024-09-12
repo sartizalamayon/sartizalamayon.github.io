@@ -28,6 +28,11 @@ module.exports = {
       },
       screens: {
         'heading-padding': {'min': '1024px', 'max': '1356px'}, 
+        'tab': {'raw': '(min-width: 412px) and (max-width: 1024px) and (min-height: 900px)'},
+        'tab2': {'raw': '(min-width: 560px) and (max-width: 1024px) and (min-height: 970px)'},
+        'tab3': {'raw': '(min-width: 560px) and (max-width: 1024px) and (min-height: 1020px)'},
+        'xs':{'raw':'(max-width: 412px)'},
+
       },
       
     },

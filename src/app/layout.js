@@ -14,7 +14,7 @@ export default function RootLayout({ children }) {
     <html lang="en">
       <link rel="icon" href="favicon.png" sizes="any" />
       
-      <body className="bg-primary min-h-screen chess-bg max-h-screen">
+      <body className="bg-primary min-h-screen chess-bg">
         {/* implement background */}
         <MyProvider>
         <ModalProvider>
@@ -22,7 +22,7 @@ export default function RootLayout({ children }) {
         
         <BackgroundBeamsWithCollision>
         <div className="w-full">
-          <div className="container mx-auto max-w-7xl">
+          <div className="container mx-auto min-h-[calc(100vh-64px)] max-w-7xl tab:pt-16 tab2:pt-20 tab3:pt-24">
           {children} 
           <TerminalModal />
           </div>

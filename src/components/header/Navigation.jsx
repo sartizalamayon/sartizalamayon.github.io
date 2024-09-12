@@ -27,7 +27,7 @@ const Navigation = ({ screen, toggle }) => {
     <>
     { screen === "sm" ? (<div className="">
     <ul
-      className={`text-white text-base flex flex-col items-center justify-center gap-2 md:gap-6 ${
+      className={`text-white xs:text-sm text-base flex flex-col items-center justify-center gap-2 md:gap-6 ${
         screen === "sm" ? "w-full h-full" : ""
       }`}
     >

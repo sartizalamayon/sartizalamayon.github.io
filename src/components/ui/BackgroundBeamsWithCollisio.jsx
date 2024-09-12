@@ -1,6 +1,6 @@
 "use client";
 import { cn } from "@/../lib/utils";
-import { motion, AnimatePresence } from "framer-motion";
+import { motion, AnimatePresence, m } from "framer-motion";
 import { usePathname } from "next/navigation";
 import React, { useRef, useState, useEffect } from "react";
 
@@ -11,7 +11,7 @@ export const BackgroundBeamsWithCollision = ({
   const containerRef = useRef(null);
   const parentRef = useRef(null);
   const pathname = usePathname();
-  const [mid, setMid] = useState();
+  const [mid, setMid] = useState(null);
 
   const isHomePage = pathname === "/";
 
@@ -49,6 +49,7 @@ export const BackgroundBeamsWithCollision = ({
   const beams = [
     {
       // Align with the 1st vertical line to the right
+      id : 1,
       initialX: mid + (gap / 2) + (gap * 0),
       translateX: mid + (gap / 2) + (gap * 0),
       duration: 8,       // Increased duration for slower animation
@@ -57,6 +58,7 @@ export const BackgroundBeamsWithCollision = ({
     },
     {
       // Align with the 2nd vertical line to the right
+      id : 2,
       initialX: mid + (gap / 2) + (gap * 1),
       translateX: mid + (gap / 2) + (gap * 1),
       duration: 10,      // Increased duration for a much slower transition
@@ -66,6 +68,7 @@ export const BackgroundBeamsWithCollision = ({
     },
     {
       // Align with the 3rd vertical line to the right
+      id : 3,
       initialX: mid + (gap / 2) + (gap * 2),
       translateX: mid + (gap / 2) + (gap * 2),
       duration: 9,       // Slower for a smoother effect
@@ -74,6 +77,7 @@ export const BackgroundBeamsWithCollision = ({
     },
     {
       // Align with the 4th vertical line to the right
+      id : 4,
       initialX: mid + (gap / 2) + (gap * 3),
       translateX: mid + (gap / 2) + (gap * 3),
       duration: 11,      // Slower animation
@@ -82,6 +86,7 @@ export const BackgroundBeamsWithCollision = ({
     },
     {
       // Align with the 1st vertical line to the left
+      id : 5,
       initialX: mid - (gap / 2) - (gap * 0),
       translateX: mid - (gap / 2) - (gap * 0),
       duration: 10,      // Slower movement
@@ -91,6 +96,7 @@ export const BackgroundBeamsWithCollision = ({
     },
     {
       // Align with the 2nd vertical line to the left
+      id : 6,
       initialX: mid - (gap / 2) - (gap * 1),
       translateX: mid - (gap / 2) - (gap * 1),
       duration: 9,       // Slower duration
@@ -100,6 +106,7 @@ export const BackgroundBeamsWithCollision = ({
     },
     {
       // Align with the 3rd vertical line to the left
+      id : 7,
       initialX: mid - (gap / 2) - (gap * 2),
       translateX: mid - (gap / 2) - (gap * 2),
       duration: 8,       // Slower for a consistent effect
@@ -109,6 +116,7 @@ export const BackgroundBeamsWithCollision = ({
     },
     {
       // Align with the 4th vertical line to the left
+      id : 8,
       initialX: mid - (gap / 2) - (gap * 3),
       translateX: mid - (gap / 2) - (gap * 3),
       duration: 10,      // Slower and smoother
@@ -116,34 +124,65 @@ export const BackgroundBeamsWithCollision = ({
       delay: 3,          // Starts late for visual variety
       className: "h-6",
     },
-    {
-      // Align with the 5th vertical line to the left
-      initialX: mid - (gap / 2) - (gap * 4),
-      translateX: mid - (gap / 2) - (gap * 4),
-      duration: 9,       // Slower duration
-      repeatDelay: 15,   // Longer repeat delay
-      delay: 2,          // Moderate delay to balance out flow
-      className: "h-6",
-    },
   ];
   
   
 
   return (
-    (isHomePage? (<div
+    ((isHomePage && mid!==null)? (<div
       ref={parentRef}
       className={cn(
         " relative flex items-center w-full justify-center overflow-hidden",
         // h-screen if you want bigger
         className
       )}>
-      {beams.map((beam, idx) => (
-        <CollisionMechanism
-          key={idx}
-          beamOptions={beam}
-          containerRef={containerRef}
-          parentRef={parentRef} />
-      ))}
+      {mid!==null && (beams.map((beam, idx) => {
+        if(window.innerWidth < 778){
+          // 3rd and 4th index
+          if(beam.id === 1 || beam.id === 5){
+            return (
+              <CollisionMechanism
+                key={idx}
+                parentRef={parentRef}
+                containerRef={containerRef}
+                beamOptions={beam} />
+            );
+          }
+        }
+        else if(window.innerWidth > 778 && window.innerWidth < 1290){
+          if(beam.id === 1 || beam.id === 5 || beam.id === 2 || beam.id === 6){
+            return (
+              <CollisionMechanism
+                key={idx}
+                parentRef={parentRef}
+                containerRef={containerRef}
+                beamOptions={beam} />
+            );
+          }
+        }
+        else if(window.innerWidth > 1350 && window.innerWidth < 1830){
+          if(beam.id === 1 || beam.id === 5 || beam.id === 2 || beam.id === 6 || beam.id === 3 || beam.id === 7){
+            return (
+              <CollisionMechanism
+                key={idx}
+                parentRef={parentRef}
+                containerRef={containerRef}
+                beamOptions={beam} />
+            );
+          }
+        }
+        else{
+          return (
+            <CollisionMechanism
+              key={idx}
+              parentRef={parentRef}
+              containerRef={containerRef}
+              beamOptions={beam} />
+          );
+        }
+        
+      
+}))}
       {children}
       <div
         ref={containerRef}
@@ -154,7 +193,7 @@ export const BackgroundBeamsWithCollision = ({
         }}></div>
     </div>):
     (
-      <div className="bg-primary min-h-screen">
+      <div className="h-screen">
         {children}
       </div>
     ))
