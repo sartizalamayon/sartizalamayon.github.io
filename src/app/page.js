@@ -30,7 +30,7 @@ export default function Home() {
       <main className="flex flex-col justify-start lg:justify-center items-center  lg:items-start gap-3 ">
         <div className="text-center lg:text-left">
           <h1 className="xs:text-lg text-xl lg:text-2xl text-accent">{`Hey there, I'm`}</h1>
-          <h2 className="xs:text-2xl text-4xl heading-padding:text-6xl lg:text-7xl font-semibold text-secondary">
+          <h2 className="xs:text-3xl text-4xl heading-padding:text-6xl lg:text-7xl font-semibold text-secondary">
             Sartiz Alam Ayon.
           </h2>
         </div>
