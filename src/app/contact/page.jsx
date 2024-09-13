@@ -3,6 +3,7 @@ import React from 'react';
 import { motion } from 'framer-motion';
 import { FaGithub, FaLinkedin, FaDev, FaFacebook, FaEnvelope } from 'react-icons/fa';
 import { FaXTwitter } from 'react-icons/fa6';
+import PageHeading from '@/components/PageHeading';
 
 const socialLinks = [
     { icon: <FaGithub />, name: 'GitHub', url: 'https://github.com/yourusername' },
@@ -15,39 +16,11 @@ const socialLinks = [
 
 const ContactPage = () => {
     return (
-        <div className="text-secondary text-left min-h-[calc(100vh-64px)] mt-11">
-            <motion.h1 
-                className="gradient-text font-semibold text-5xl font-mono"
-                initial={{ opacity: 0, y: -20 }}
-                animate={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.5 }}
-            >
-                Contact
-            </motion.h1>
-            <motion.p 
-                className="text-neutral text-lg font-light mt-2"
-                initial={{ opacity: 0, y: -20 }}
-                animate={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.5, delay: 0.2 }}
-            >
-                Get in touch with me through any of the following platforms:
-            </motion.p>
-            <div className="mt-9 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
-                {socialLinks.map((link, index) => (
-                    <motion.a 
-                        key={index}
-                        href={link.url}
-                        target="_blank"
-                        rel="noopener noreferrer"
-                        className="flex items-center space-x-4 p-4 border border-gray-300 rounded-lg hover:bg-gray-100 transition duration-200"
-                        initial={{ opacity: 0, y: 20 }}
-                        animate={{ opacity: 1, y: 0 }}
-                        transition={{ duration: 0.5, delay: 0.3 + index * 0.1 }}
-                    >
-                        <div className="text-2xl">{link.icon}</div>
-                        <div className="text-lg">{link.name}</div>
-                    </motion.a>
-                ))}
+        <div className="text-secondary text-left min-h-[calc(100vh-64px)] bg-primary xs:px-2 px-4">
+            <PageHeading heading="Get in Touch" desc="For collaborations, questions, or just to" flow="say hello" />
+
+            <div className="flex flex-col md:flex-row items-start md:items-center leading-relaxed mt-6 md:mt-8 text-base md:text-lg">
+            Working on it !
             </div>
         </div>
     );

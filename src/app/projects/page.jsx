@@ -1,6 +1,7 @@
 "use client";
 import React from 'react';
 import { motion } from 'framer-motion';
+import PageHeading from '@/components/PageHeading';
 
 const projects = [
     {
@@ -53,35 +54,12 @@ const projects = [
 
 const ProjectPage = () => {
     return (
-        <div className="min-h-screen p-5 md:p-20">
-            <motion.h1 
-                className="gradient-text font-semibold text-5xl font-mono mb-10"
-                initial={{ opacity: 0, y: -20 }}
-                animate={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.5 }}
-            >
-                Projects
-            </motion.h1>
-            {projects.map((project, index) => (
-                <motion.div 
-                    key={index}
-                    className="mb-12"
-                    initial={{ opacity: 0, y: 20 }}
-                    animate={{ opacity: 1, y: 0 }}
-                    transition={{ duration: 0.5, delay: 0.2 * index }}
-                >
-                    <h2 className="text-3xl font-semibold mb-4">{project.name}</h2>
-                    <p className="text-neutral text-lg mb-4">{project.description}</p>
-                    <ul className="list-disc list-inside mb-4">
-                        {project.details.map((detail, i) => (
-                            <li key={i}>{detail}</li>
-                        ))}
-                    </ul>
-                    <p className="text-neutral text-lg mb-4"><strong>Technologies:</strong> {project.technologies.join(', ')}</p>
-                    {project.date && <p className="text-neutral text-lg mb-4"><strong>Date:</strong> {project.date}</p>}
-                    <a href={project.github} className="text-blue-500 hover:underline">GitHub: {project.github}</a>
-                </motion.div>
-            ))}
+        <div className="text-secondary text-left min-h-[calc(100vh-64px)] bg-primary xs:px-2 px-4">
+            <PageHeading heading="Explore My Work" desc="From passion projects to " flow="cutting-edge tech solutions" />
+
+            <div className="flex flex-col md:flex-row items-start md:items-center leading-relaxed mt-6 md:mt-8 text-base md:text-lg">
+            Working on it !
+            </div>
         </div>
     );
 };

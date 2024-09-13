@@ -1,26 +1,16 @@
 "use client";
 import React from 'react';
 import { motion } from 'framer-motion';
+import PageHeading from '@/components/PageHeading';
 
 const Page = () => {
     return (
-        <div className="text-secondary text-left min-h-[calc(100vh-64px)] mt-11">
-            <motion.h1 
-                className="gradient-text font-semibold text-5xl font-mono"
-                initial={{ opacity: 0, y: -20 }}
-                animate={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.5 }}
-            >
-                Blog
-            </motion.h1>
-            <motion.p 
-                className="text-neutral text-lg font-light mt-2"
-                initial={{ opacity: 0, y: -20 }}
-                animate={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.5, delay: 0.2 }}
-            >
-                No blogs yet.
-            </motion.p>
+        <div className="text-secondary text-left min-h-[calc(100vh-64px)] bg-primary xs:px-2 px-4">
+            <PageHeading heading="Dive into My Thoughts" desc="Explore my journey through" flow="my blogs" />
+
+            <div className="flex flex-col md:flex-row items-start md:items-center leading-relaxed mt-6 md:mt-8 text-base md:text-lg">
+            Working on it !
+            </div>
         </div>
     );
 };

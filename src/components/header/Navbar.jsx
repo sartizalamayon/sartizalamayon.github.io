@@ -53,7 +53,7 @@ const Navbar = () => {
           initial={{ opacity: 0, x: "-100%" }}
           animate={{ opacity: 1, x: 0 }}
           exit={{ opacity: 0, x: "-100%" }}
-          className="fixed top-0 left-0 w-full h-full bg-black bg-opacity-50 backdrop-blur-md z-50"
+          className="fixed top-0 left-0 w-full h-full bg-black bg-opacity-50 backdrop--md z-50"
         >
           <div className="flex flex-col items-center justify-center w-full h-full relative">
             {/* Navigation Links */}

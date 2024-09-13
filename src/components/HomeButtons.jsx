@@ -22,13 +22,13 @@ const HomeButtons = () => {
         },
     ];
     return (
-        <div className='flex xs:gap-2 gap-3'>
+        <div className='flex xs:gap-[0.6rem] gap-3'>
             {links.map((link, index) => (
             <a
               href={link.url}
               target="_blank"
               key={index}
-              className="flex justify-center items-center gap-1 bg-[#222] hover:bg-[#333] rounded-md xs:px-3 xs:py-1 px-4 py-2 hover:shadow-inner shadow-white"
+              className="flex justify-center items-center gap-1 bg-[#222] hover:bg-[#333] rounded-md xs:px-3 xs:py-[.3rem] px-4 py-2 hover:shadow-inner shadow-white"
             >
               <div className="text-accent">{link.icon}</div>
               <p className="xs:text-sm text-base text-white font-light">{link.name}</p>
