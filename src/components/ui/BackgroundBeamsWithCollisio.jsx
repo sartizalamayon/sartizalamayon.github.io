@@ -52,27 +52,26 @@ export const BackgroundBeamsWithCollision = ({
       id : 1,
       initialX: mid + (gap / 2) + (gap * 0),
       translateX: mid + (gap / 2) + (gap * 0),
-      duration: 8,       // Increased duration for slower animation
-      repeatDelay: 14,   // Longer repeat delay
-      delay: 1,          // Starts almost immediately
+      duration: 12,       // Increased duration for slower animation
+      repeatDelay: 20,   // Longer repeat delay
+      delay: 2,          // Starts almost immediately
     },
     {
       // Align with the 2nd vertical line to the right
       id : 2,
       initialX: mid + (gap / 2) + (gap * 1),
       translateX: mid + (gap / 2) + (gap * 1),
-      duration: 10,      // Increased duration for a much slower transition
-      repeatDelay: 16,   // Longer repeat delay
-      delay: 2,          // Starts with a small delay
-      className: "h-6",
+      duration: 15,      // Increased duration for a much slower transition
+      repeatDelay: 24,   // Longer repeat delay
+      delay: 3,          // Starts with a small delay
     },
     {
       // Align with the 3rd vertical line to the right
       id : 3,
       initialX: mid + (gap / 2) + (gap * 2),
       translateX: mid + (gap / 2) + (gap * 2),
-      duration: 9,       // Slower for a smoother effect
-      repeatDelay: 18,   // Longer repeat delay
+      duration: 13,       // Slower for a smoother effect
+      repeatDelay: 16,   // Longer repeat delay
       delay: 3,          // Starts with a noticeable delay
     },
     {
@@ -80,49 +79,45 @@ export const BackgroundBeamsWithCollision = ({
       id : 4,
       initialX: mid + (gap / 2) + (gap * 3),
       translateX: mid + (gap / 2) + (gap * 3),
-      duration: 11,      // Slower animation
-      repeatDelay: 15,   // Balanced repeat delay
-      delay: 1,          // Quick start with a very short delay
+      duration: 14,      // Slower animation
+      repeatDelay: 19,   // Balanced repeat delay
+      delay: 3,          // Quick start with a very short delay
     },
     {
       // Align with the 1st vertical line to the left
       id : 5,
       initialX: mid - (gap / 2) - (gap * 0),
       translateX: mid - (gap / 2) - (gap * 0),
-      duration: 10,      // Slower movement
-      repeatDelay: 9,    // Moderate repeat
+      duration: 12,      // Slower movement
+      repeatDelay: 20,    // Moderate repeat
       delay: 2,          // Medium delay before starting
-      className: "h-20",
     },
     {
       // Align with the 2nd vertical line to the left
       id : 6,
       initialX: mid - (gap / 2) - (gap * 1),
       translateX: mid - (gap / 2) - (gap * 1),
-      duration: 9,       // Slower duration
-      repeatDelay: 12,   // Longer repeat delay
-      delay: 0,          // Starts immediately
-      className: "h-20",
+      duration: 11,       // Slower duration
+      repeatDelay: 15,   // Longer repeat delay
+      delay: 3,          // Starts immediately
     },
     {
       // Align with the 3rd vertical line to the left
       id : 7,
       initialX: mid - (gap / 2) - (gap * 2),
       translateX: mid - (gap / 2) - (gap * 2),
-      duration: 8,       // Slower for a consistent effect
-      repeatDelay: 10,   // Longer repeat delay
-      delay: 1,          // Small delay before starting
-      className: "h-6",
+      duration: 10,       // Slower for a consistent effect
+      repeatDelay: 20,   // Longer repeat delay
+      delay: 3,          // Small delay before starting
     },
     {
       // Align with the 4th vertical line to the left
       id : 8,
       initialX: mid - (gap / 2) - (gap * 3),
       translateX: mid - (gap / 2) - (gap * 3),
-      duration: 10,      // Slower and smoother
-      repeatDelay: 16,   // Longer repeat delay
+      duration: 16,      // Slower and smoother
+      repeatDelay: 15,   // Longer repeat delay
       delay: 3,          // Starts late for visual variety
-      className: "h-6",
     },
   ];
   

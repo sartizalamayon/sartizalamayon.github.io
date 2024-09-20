@@ -1,4 +1,4 @@
-"use client";
+'use client';
 import React from 'react';
 import PageHeading from '@/components/PageHeading';
 import Image from 'next/image';
@@ -48,19 +48,18 @@ const Page = () => {
                 >
                     <p className="mt-4 md:mt-0 leading-8">
                         Hey, I am <HighlightedWords text="Sartiz Alam Ayon" />. I am a <HighlightedWords text="Software Engineer" />, building robust 
-                        <HighlightedWords text="Full Stack Web applications" />. I've been close to a computer since I was 11, and been passionate about it ever since. I am also doing my Bachelor's in <HighlightedWords text="Computer Science" /> from BRAC University. 
+                        <HighlightedWords text=" Full Stack Web applications" />. I&apos;ve been close to a computer since I was 11, and been passionate about it ever since. I am also doing my Bachelor&apos;s in <HighlightedWords text="Computer Science" /> from BRAC University. 
                     </p>
                     <p className="mt-4 md:mt-0 leading-8">
                         I am proficient in programming languages Python, JavaScript, C, and C++. I have expertise in <HighlightedWords text="MERN Stack" /> and <HighlightedWords text="NextJs" /> development. I also have a strong knowledge of <HighlightedWords text="Data structures and algorithms" />. 
                     </p>
                     <p className="mt-4 md:mt-0 leading-8">
-                        I love solving problems, open source, and side projects. When I'm not building things, I like designing, art, and music. I am also a huge TV series and football fan. <HighlightedWords text="Let's Connect" />.
+                        I love solving problems, open source, and side projects. When I&apos;m not building things, I like designing, art, and music. I am also a huge TV series and football fan. <HighlightedWords text="Let&apos;s Connect" />.
                     </p>
                     
                     {/* Reach out button with cool hover effect */}
                     <Link href="/contact">
                         <motion.button
-                            
                             className="flex text-accent justify-center items-center gap-1 hover:translate-x-1"
                         >
                             Reach out
