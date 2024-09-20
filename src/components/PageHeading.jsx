@@ -5,7 +5,7 @@ import { motion } from 'framer-motion';
 
 const PageHeading = ({heading, desc, flow}) => {
     return (
-        <div className='pt-7 lg:pt-9'>
+        <div className='pt-5 lg:pt-8 text-center md:text-left'>
             <motion.h1 
                 className="gradient-text font-semibold xs:2xl text-3xl md:text-4xl lg:text-[2.8rem]  font-mono mb-2"
                 initial={{ opacity: 0, y: -20 }}
