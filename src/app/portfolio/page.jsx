@@ -14,21 +14,21 @@ import HighlightedWords from '@/components/HighlightedWords';
 
 const skills = [
   { name: "Python", icon: <FaPython /> },
-  { name: "JavaScript", icon: <FaJs /> },
+  { name: "JS", icon: <FaJs /> },
   { name: "C", icon: <SiC /> },
   { name: "C++", icon: <SiCplusplus /> },
-  { name: "HTML5", icon: <FaHtml5 /> },
-  { name: "CSS3", icon: <FaCss3Alt /> },
+  { name: "HTML", icon: <FaHtml5 /> },
+  { name: "CSS", icon: <FaCss3Alt /> },
   { name: "React", icon: <FaReact /> },
   { name: "Node.js", icon: <FaNodeJs /> },
-  { name: "Express.js", icon: <FaNodeJs /> },
+  { name: "Express", icon: <FaNodeJs /> },
   { name: "Flask", icon: <SiFlask /> },
   { name: "Firebase", icon: <SiFirebase /> },
   { name: "MySQL", icon: <PiFileSqlLight />  },
-  { name: "MongoDB", icon: <SiMongodb /> },
+  { name: "MongoDb", icon: <SiMongodb /> },
   { name: "Git", icon: <FaGit /> },
   { name: "Github", icon: <FaGithub /> },
-  { name: "TailwindCSS", icon: <SiTailwindcss /> },
+  { name: "Tailwind", icon: <SiTailwindcss /> },
   { name: "Photoshop", icon: <SiAdobephotoshop /> },
   { name: "Next.js", icon: <SiNextdotjs /> },
 ];
@@ -71,8 +71,8 @@ const Page = () => {
         <div className="grid grid-cols-3 sm:grid-cols-4 lg:grid-cols-6 gap-6">
           {skills.map((skill, index) => (
             <div key={index} className="px-3 py-[10px] flex items-center space-x-2 rounded-md  border-t-gray-300 border-r-gray-300 border-[1.5px] border-t-[0.2px] border-r-[0.2px]">
-              <div className="text-base ">{skill.icon}</div>
-              <span className="text-base font-light">{skill.name}</span>
+              <div className="xs:text-xs sm:text-sm md:text-base ">{skill.icon}</div>
+              <span className="xs:text-xs sm:text-sm md:text-base font-light">{skill.name}</span>
             </div>
           ))}
         </div>
