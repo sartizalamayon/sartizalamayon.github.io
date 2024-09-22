@@ -188,7 +188,7 @@ export const BackgroundBeamsWithCollision = ({
         }}></div>
     </div>):
     (
-      <div className="h-screen">
+      <div className="min-h-screen">
         {children}
       </div>
     ))
@@ -277,7 +277,7 @@ const CollisionMechanism = React.forwardRef(({ parentRef, containerRef, beamOpti
         repeatDelay: beamOptions.repeatDelay || 0,
       }}
       className={cn(
-        "absolute left-0 top-20 m-auto h-14 w-px rounded-full bg-gradient-to-t from-accent to-transparent",
+        "absolute left-0 top-20 m-auto h-14 w-px rounded-full bg-gradient-to-t from-accent to-transparent opacity-30",
         beamOptions.className
       )} />
     <AnimatePresence>
@@ -315,7 +315,7 @@ const Explosion = ({
         animate={{ opacity: 1 }}
         exit={{ opacity: 0 }}
         transition={{ duration: 1.5, ease: "easeOut" }}
-        className="absolute -inset-x-10 top-0 m-auto h-2 w-10 rounded-full bg-gradient-to-r from-transparent via-accent to-transparent blur-md"></motion.div>
+        className="absolute -inset-x-10 top-0 m-auto h-2 w-10 rounded-full bg-gradient-to-r from-transparent via-accent to-transparent blur-md opacity-30"></motion.div>
       {spans.map((span) => (
         <motion.span
           key={span.id}
@@ -326,7 +326,7 @@ const Explosion = ({
             opacity: 0,
           }}
           transition={{ duration: Math.random() * 1.5 + 0.5, ease: "easeOut" }}
-          className="absolute h-1 w-1 rounded-full bg-gradient-to-b from-accent to-emerald-600" />
+          className="absolute h-1 w-1 rounded-full bg-gradient-to-b from-accent to-emerald-600 opacity-30" />
       ))}
     </div>)
   );

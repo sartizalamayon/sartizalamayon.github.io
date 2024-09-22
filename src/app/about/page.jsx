@@ -6,6 +6,7 @@ import HighlightedWords from '@/components/HighlightedWords';
 import { FaArrowRightLong } from "react-icons/fa6";
 import Link from 'next/link';
 import { motion } from 'framer-motion';
+import BracketLinks from '@/components/BracketLinks';
 
 const Page = () => {
     return (
@@ -54,18 +55,16 @@ const Page = () => {
                         I am proficient in programming languages Python, JavaScript, C, and C++. I have expertise in <HighlightedWords text="MERN Stack" /> and <HighlightedWords text="NextJs" /> development. I also have a strong knowledge of <HighlightedWords text="Data structures and algorithms" />. 
                     </p>
                     <p className="mt-4 md:mt-0 leading-8">
-                        I love solving problems, open source, and side projects. When I&apos;m not building things, I like designing, art, and music. I am also a huge TV series and football fan. <HighlightedWords text="Let&apos;s Connect" />.
+                        I love solving problems, open source, and side projects. When I&apos;m not building things, I like designing, art, and music. I am also a huge TV series and football fan.  
+                        <Link href="/contact" className=' inline'>
+                        <BracketLinks text="Let's Connect" />
+
+
+                        </Link>
                     </p>
                     
                     {/* Reach out button with cool hover effect */}
-                    <Link href="/contact">
-                        <motion.button
-                            className="flex text-accent justify-center items-center gap-1 hover:translate-x-1"
-                        >
-                            Reach out
-                            <FaArrowRightLong />
-                        </motion.button>
-                    </Link>
+                    
                 </motion.div>
             </div>
         </div>
