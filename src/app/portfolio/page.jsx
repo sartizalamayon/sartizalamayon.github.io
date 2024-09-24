@@ -2,12 +2,11 @@
 import React from 'react';
 import PageHeading from '@/components/PageHeading';
 import { motion } from 'framer-motion';
-import { FaPython, FaNodeJs, FaReact, FaGit, FaHtml5, FaCss3Alt, FaJs, FaGithub, FaUbuntu } from 'react-icons/fa'; 
+import { FaPython, FaNodeJs, FaReact, FaGit, FaHtml5, FaCss3Alt, FaJs, FaGithub, FaUbuntu, FaStripe } from 'react-icons/fa'; 
 import { SiFirebase, SiMongodb, SiTailwindcss, SiBootstrap, SiNextdotjs, SiC, SiCplusplus, SiFlask, SiMysql, SiAdobephotoshop } from 'react-icons/si'; 
 import { PiFileSqlLight } from "react-icons/pi";
 import Link from 'next/link';
 import Lottie from 'lottie-react';
-import code from '/public/code.json'
 import BracketLinks from '@/components/BracketLinks';
 import HighlightedWords from '@/components/HighlightedWords';
 
@@ -24,13 +23,14 @@ const skills = [
   { name: "Express", icon: <FaNodeJs /> },
   { name: "Flask", icon: <SiFlask /> },
   { name: "Firebase", icon: <SiFirebase /> },
-  { name: "MySQL", icon: <PiFileSqlLight />  },
+  { name: "SQL", icon: <PiFileSqlLight />  },
   { name: "MongoDb", icon: <SiMongodb /> },
   { name: "Git", icon: <FaGit /> },
   { name: "Github", icon: <FaGithub /> },
   { name: "Tailwind", icon: <SiTailwindcss /> },
   { name: "Photoshop", icon: <SiAdobephotoshop /> },
   { name: "Next.js", icon: <SiNextdotjs /> },
+  { name: "Stripe", icon: <FaStripe/>}
 ];
 
 // Education data
@@ -50,11 +50,6 @@ const Page = () => {
         desc="My education, certifications," 
         flow="skills and achievements"
       />
-
-      {/* Lottie Animation */}
-      {/* <div className="w-80 h-80">
-        <Lottie animationData={code} />
-      </div> */}
 
       {/* Skills Section */}
       <motion.div
