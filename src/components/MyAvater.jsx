@@ -5,12 +5,12 @@ import { GLTFLoader } from "three/examples/jsm/loaders/GLTFLoader";
 import { useLoader } from "@react-three/fiber";
 
 const Avatar = () => {
-    const gltf = useLoader(GLTFLoader, "/ava.glb");
+    const gltf = useLoader(GLTFLoader, "/hoodie.glb");
     const avatarRef = useRef();
 
     useFrame(() => {
         if (avatarRef.current) {
-            avatarRef.current.position.y = -1.5 + Math.sin(Date.now() * 0.002) * 0.1;
+            avatarRef.current.rotation.y += 0.01;
         }
     });
 
@@ -19,22 +19,25 @@ const Avatar = () => {
 
 const MyAvatar = () => {
     return (
-        <div className="relative flex items-center justify-center xs:w-[250px] xs:h-[250px] w-[300px] h-[300px] lg:w-[360px] lg:h-[550px] overflow-visible ">
-            <div className="absolute top-auto xs:w-[130px] xs:h-[130px] w-[170px] h-[170px] lg:w-[300px] lg:h-[300px] rounded-full border-4 border-accent shadow-[0_0_15px_rgba(60,207,145,0.6)] animate-pulse"></div>
-            <div className="absolute top-auto xs:w-[110px] xs:h-[110px] w-[150px] h-[150px] lg:w-[280px] lg:h-[280px] rounded-full border-4 border-accent shadow-[0_0_15px_rgba(60,207,145,0.6)] animate-pulse"></div>
+        <div className="relative flex items-center justify-center xs:w-[250px] xs:h-[250px] w-[300px] h-[300px] lg:w-[360px] lg:h-[550px] overflow-visible">
+            {/* Rotating blurred concentric circles */}
+            <div className="absolute w-[300px] h-[300px] lg:w-[400px] lg:h-[400px] bg-gradient-to-t from-accent/40 to-accent/10 rounded-full animate-spin-slow blur-3xl"></div>
+            <div className="absolute w-[200px] h-[200px] lg:w-[300px] lg:h-[300px] bg-gradient-to-b from-accent/20 to-accent/10 rounded-full animate-spin-reverse-slow blur-2xl"></div>
+
+
+
+
             <Canvas className="xs:w-[270px] xs:h-[270px] w-[320px] h-[320px] lg:w-[360px] lg:h-[360px] overflow-visible">
                 <ambientLight intensity={0.4} />
                 <directionalLight position={[2, 2, 5]} intensity={3} />
-                <directionalLight position={[-1, -1, -0.5]} intensity={6} />
-                <spotLight position={[0, 5, 5]} angle={0.8} penumbra={1} intensity={1} castShadow />
                 <Avatar />
                 <OrbitControls
                     enableZoom={false}
-                    target={[0, -0.12, 0]}
-                    maxPolarAngle={Math.PI}
-                    minPolarAngle={Math.PI / 12}
-                    minDistance={2.7}
-                    maxDistance={2.7}
+                    target={[0, 1.6, 0]}
+                    maxPolarAngle={Math.PI / 2.5}
+                    minPolarAngle={Math.PI / 10}
+                    minDistance={2.3}
+                    maxDistance={2.3}
                 />
             </Canvas>
         </div>
