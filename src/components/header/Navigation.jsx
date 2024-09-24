@@ -9,7 +9,7 @@ const paths = [
   { name: "Portfolio", link: "/portfolio" },
   { name: "Projects", link: "/projects" },
   { name: "Contact", link: "/contact" },
-  { name: "Blog", link: "/blog" },
+  // { name: "Blog", link: "/blog" },
 ];
 
 const Navigation = ({ screen, toggle }) => {
