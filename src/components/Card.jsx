@@ -7,7 +7,7 @@ import { TbLink } from "react-icons/tb";
 
 export function Card({ project }) {
   return (
-    <CardContainer className="b bg-gradient-to-b from-neutral-950 to-primary inter-var border border-white rounded-xl shadow-md hover:shadow-2xl transition-shadow duration-300">
+    <CardContainer className="bg-gradient-to-b from-neutral-950 to-primary inter-var border border-white rounded-xl shadow-md hover:shadow-2xl transition-shadow duration-300">
       <CardBody className="relative group/card dark:hover:shadow-2xl border-black/[0.1] h-auto rounded-xl p-6">
         {/* Project Name */}
         <CardItem

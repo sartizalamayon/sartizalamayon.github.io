@@ -3,10 +3,9 @@ import React from 'react';
 import PageHeading from '@/components/PageHeading';
 import { motion } from 'framer-motion';
 import { FaPython, FaNodeJs, FaReact, FaGit, FaHtml5, FaCss3Alt, FaJs, FaGithub, FaUbuntu, FaStripe } from 'react-icons/fa'; 
-import { SiFirebase, SiMongodb, SiTailwindcss, SiBootstrap, SiNextdotjs, SiC, SiCplusplus, SiFlask, SiMysql, SiAdobephotoshop } from 'react-icons/si'; 
+import { SiFirebase, SiMongodb, SiTailwindcss, SiNextdotjs, SiC, SiCplusplus, SiFlask } from 'react-icons/si'; 
 import { PiFileSqlLight } from "react-icons/pi";
 import Link from 'next/link';
-import Lottie from 'lottie-react';
 import BracketLinks from '@/components/BracketLinks';
 import HighlightedWords from '@/components/HighlightedWords';
 
@@ -28,7 +27,6 @@ const skills = [
   { name: "Git", icon: <FaGit /> },
   { name: "Github", icon: <FaGithub /> },
   { name: "Tailwind", icon: <SiTailwindcss /> },
-  { name: "Photoshop", icon: <SiAdobephotoshop /> },
   { name: "Next.js", icon: <SiNextdotjs /> },
   { name: "Stripe", icon: <FaStripe/>}
 ];
@@ -50,13 +48,13 @@ const Page = () => {
         desc="My education, certifications," 
         flow="skills and achievements"
       />
-
+      <hr className="mt-4 border-t-[0.5px] border-neutral-800" />
       {/* Skills Section */}
       <motion.div
         initial={{ opacity: 0, y: 50 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.7, ease: "easeOut" }}
-        className="my-9"
+        className="mb-9 mt-6"
       >
         <h2 className="text-xl md:text-2xl mb-8 flex items-center font-medium">
           <span className="inline-block w-[2px] h-6 bg-accent mr-4"></span>

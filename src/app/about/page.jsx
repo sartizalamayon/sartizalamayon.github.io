@@ -18,7 +18,7 @@ const Page = () => {
                 desc="Who I am, what I love and" 
                 flow="what I do" 
             />
-            
+            <hr className="mt-4 border-t-[0.5px] border-neutral-800" />
             <div className="flex flex-col md:flex-row items-center justify-between mt-10 w-full max-w-6xl gap-7">
                 
                 {/* Image Section */}
