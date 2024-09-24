@@ -26,37 +26,29 @@ const TerminalModal = () => {
   }, [openModal]);
 
   const commands = {
-    help: `    'whoami' - See my information
-    'connect' - Connect with me 
-    'cd' - Change route ex: 'cd projects' 
-    'ls' - Lists all The routes you can explore 
-    'clear' - Clear the terminal 
-    'help' - List all available commands
-    'exit' - Close the terminal
-    `,
+    help: `Here are the available commands:
+-'whoami' - See my information
+-'connect' - Connect with me 
+-'cd' - Change route ex: 'cd projects' 
+-'ls' - Lists all The routes you can explore 
+-'clear' - Clear the terminal 
+-'help' - List all available commands
+-'exit' - Close the terminal`,
 
     whoami: `Sartiz Alam Ayon
 - A software engineer based in Dhaka, Bangladesh
 - I am currently studying Computer Science at BRAC University`,
-    ls: `    -home
-    - about
-    - portfolio
-        - skills
-        - experience
-        - education
-        - recognition
-    - projects
-        - projects
-        - caseStudy 
-    - contact
-    - blog
-    - services
+    ls: `- home
+- about
+- portfolio
+- projects
+- contact
 use 'cd' to navigate to the routes`,
-    connect: `    - Email: sartiz.a.ayon@gmail.com
-    - LinkedIn: linkedin.com/in/sartiz-alam-ayon/
-    - Github: github.com/sartizalamayon
-    - Twitter: x.com/Sartiz_Ayon__
-    - Facebook: facebook.com/sartizayO.On/`,
+    connect: `- Email: sartiz.a.ayon@gmail.com
+- LinkedIn: linkedin.com/in/sartiz-alam-ayon/
+- Github: github.com/sartizalamayon
+- Twitter: x.com/Sartiz_Ayon__
+- Facebook: facebook.com/sartizayO.On/`,
 
     cd: (directory) => {
       const routes = ["about", "portfolio", "projects", "contact", "blog", "services"];
@@ -94,7 +86,7 @@ use 'cd' to navigate to the routes`,
           }}>x</button>
           <TerminalContextProvider>
             <ReactTerminal
-              welcomeMessage="Welcome to my portfolio! Type 'help' to get started."
+              welcomeMessage="This is a interactive terminal. Type 'help' to start. "
               commands={commands}
               themes={{
                 "my-custom-theme": {
