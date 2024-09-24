@@ -36,7 +36,7 @@ export default function Home() {
         </div>
 
         <p className="xs:text-base text-xl lg:text-3xl heading-padding:text-2xl text-white">Software Engineer | Web Developer</p>
-        <p className="xs:text-sm text-base lg:text-lg font-thin text-white">
+        <p className=" text-base lg:text-lg font-normal text-white">
           Reach me at{" "}
           <a
             href="mailto:sartiz.a.ayon@gmail.com"
@@ -61,7 +61,7 @@ export default function Home() {
           </div>
         </div>
         <div className="md:hidden">
-          <div className="text-[15px] text-white flex gap-2">
+          <div className="text-base text-white flex gap-2 font-light">
             Press
             <div className="flex">
               <button onClick={openModal} className="text-xl text-accent">

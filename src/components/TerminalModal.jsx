@@ -88,7 +88,10 @@ use 'cd' to navigate to the routes`,
   return (
     <dialog id="my_modal_2" className="modal bg-[rgba(0,0,0,0.4)] rounded-lg border-none outline-none focus:border-none focus:outline-none" open={isModalOpen}>
       <div className="modal-box p-0 lg:w-[550px] max-w-[550px] rounded-2xl h-[370px] overflow-hidden border-neutral border-x-[0.2px]">
-        <div className="h-[389px]">
+        <div className="h-[389px] relative">
+          <button className="absolute left-3 top-[1.2px] text-base text-primary hover:text-red-500 z-50 font-bold" onClick={()=>{
+            closeModal();
+          }}>x</button>
           <TerminalContextProvider>
             <ReactTerminal
               welcomeMessage="Welcome to my portfolio! Type 'help' to get started."

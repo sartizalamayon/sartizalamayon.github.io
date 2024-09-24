@@ -230,3 +230,7 @@ html {
 .animate-spin-reverse-slow {
   animation: spin-reverse-slow 25s linear infinite;
 }
+
+.index_consoleCtrl__DI2H1{
+  visibility: hidden;
+}
